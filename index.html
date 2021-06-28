@@ -33,9 +33,24 @@
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
+	   
 	   	<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+
+<script>
+  function signInWithGoogle() {
+        firebase.initializeApp(config);
+        var googleAuthProvider = new firebase.auth.GoogleAuthProvider
+        firebase.auth().signInWithPopup(googleAuthProvider)
+        .then(function (data){
+            console.log(data)
+        })
+        .catch(function(error){
+            console.log(error)
+        })
+    }
+</script>
 
     <script>
     var serviceWorkerVersion = '1063700843';
