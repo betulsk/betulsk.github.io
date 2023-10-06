@@ -1,120 +1,190 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="assets/theme.js"></script>
 
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/">
+  <title>Portfolio</title>
 
   <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="stocktrace">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-  
-  <title>stocktrace</title>
-  <link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/theme.css">
 </head>
-<body>
-  <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
-	   
-	   	<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <body data-spy="scroll" data-target="#navbar" data-offset="50" >
+    <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://emant.altervista.org" target="_blank" title="my Website"><img src="http://emant.altervista.org/ext/logo.png" alt="EmAnt's Logo" /></a>
+      </div>
 
-<script>
-  function signInWithGoogle() {
-        firebase.initializeApp(config);
-        var googleAuthProvider = new firebase.auth.GoogleAuthProvider
-        firebase.auth().signInWithPopup(googleAuthProvider)
-        .then(function (data){
-            console.log(data)
-        })
-        .catch(function(error){
-            console.log(error)
-        })
-    }
-</script>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#home" class="hash"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+          <li><a href="#about" class="hash"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a></li>
+          <li><a href="#portfolio" class="hash"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Portfolio</a></li>
+          <li><a href="#links" class="hash"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Links</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
 
-    <script>
-    var serviceWorkerVersion = '1063700843';
-    var scriptLoaded = false;
-    function loadMainDartJs() {
-      if (scriptLoaded) {
-        return;
-      }
-      scriptLoaded = true;
-      var scriptTag = document.createElement('script');
-      scriptTag.src = 'main.dart.js';
-      scriptTag.type = 'application/javascript';
-      document.body.append(scriptTag);
-    }
+    <section id="home" class="main-nav">
+      <div class="heading dark-bg">
+        <div class="row">
+          <div class="col-sm-12 head">
+            <div class="logo">
+              <img src="http://emant.altervista.org/ext/logo.png" alt="EmAnt's Logo" />
+            </div>
+            <h1 class="stm-font">Web Design and Development</h1>
+          </div>
+        </div>
+        <div class="row">
+          <nav>
+            <ul class="list-inline links ">
+              <li><a class="btn btn-default btn-lg" href="https://github.com/Em-Ant" title="EmAnt on GitHub" target="_blank"><i class="fa fa-github"></i></a></li>
+              <li><a class="btn btn-default btn-lg" href="http://codepen.io/Em-Ant/" title="EmAnt on Codepen" target="_blank"><i class="fa fa-codepen"></i></a></li>
+              <li><a class="btn btn-default btn-lg" href="http://theclubofastronauts.deviantart.com/"  title="EmAnt on DeviantArt" target="_blank"><i class="fa fa-deviantart"></i></a></li>
+              <li><a class="btn btn-default btn-lg" href="https://twitter.com/js999x"  title="EmAnt on Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            </ul>   
+          </nav>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row showcase stm-font">
+          <div class="col-sm-4 hidden-xs">
+            <div class="well shadow up-hover color-hover">
+              <h1><i class="fa fa-lightbulb-o"></i></h1>
+              <h2 >Concept</h2>
+            </div>  
+          </div>
+          <div class="col-sm-4 hidden-xs">
+            <div class="well shadow up-hover color-hover">
+              <h1 ><i class="fa fa-pencil-square-o"></i></h1>
+              <h2 >Design</h2>
+            </div>  
+          </div>
+          <div class="col-sm-4 hidden-xs">
+            <div class="well shadow up-hover color-hover">
+              <h1 ><i class="fa fa-code"></i></h1>
+              <h2 >Development</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    if ('serviceWorker' in navigator) {
-      // Service workers are supported. Use them.
-      window.addEventListener('load', function () {
-        // Wait for registration to finish before dropping the <script> tag.
-        // Otherwise, the browser will load the script multiple times,
-        // potentially different versions.
-        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
-        navigator.serviceWorker.register(serviceWorkerUrl)
-          .then((reg) => {
-            function waitForActivation(serviceWorker) {
-              serviceWorker.addEventListener('statechange', () => {
-                if (serviceWorker.state == 'activated') {
-                  console.log('Installed new service worker.');
-                  loadMainDartJs();
-                }
-              });
-            }
-            if (!reg.active && (reg.installing || reg.waiting)) {
-              // No active web worker and we have installed or are installing
-              // one for the first time. Simply wait for it to activate.
-              waitForActivation(reg.installing || reg.waiting);
-            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
-              // When the app updates the serviceWorkerVersion changes, so we
-              // need to ask the service worker to update.
-              console.log('New service worker available.');
-              reg.update();
-              waitForActivation(reg.installing);
-            } else {
-              // Existing service worker is still good.
-              console.log('Loading app from service worker.');
-              loadMainDartJs();
-            }
-          });
+    <div class="container">
+      <section id="about" class="main-nav">
+      <h1><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>  About</h1>
+      <div class="row">
+        <div class="col-sm-4 ">
+          <img src="http://emant.altervista.org/ext/avatar.png" alt="description" title="tool tip" class="img-circle shadow up-hover avatar">
+        </div>
+        <div class="col-sm-8 ">
+          <h2 class="text-primary stm-font">Skills</h2>
+          <p>Full Stack Web Development, Data Visualization, Flat Design, Vector Illustrations</p>
+          <h2 class="text-primary stm-font">Tools</h2>
+          <p>Linux - HTML, CSS, SASS, JavaScript - jQuery, Bootstrap, Angular.js, React.js, D3.js - Node.js, Express.js, php - MongoDB, MySQL - Git, Heroku</p>
+          <p>Inkscape, GIMP</p>
+        </div>
+      </div>
+      </section>
+      <section id="portfolio" class="main-nav"><!--start portfolio-->
+      <h1><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Portfolio</h1>
+      <div class="row"><!---start row-->
 
-        // If service worker doesn't succeed in a reasonable amount of time,
-        // fallback to plaint <script> tag.
-        setTimeout(() => {
-          if (!scriptLoaded) {
-            console.warn(
-              'Failed to load app from service worker. Falling back to plain <script> tag.',
-            );
-            loadMainDartJs();
-          }
-        }, 4000);
-      });
-    } else {
-      // Service workers not supported. Just drop the <script> tag.
-      loadMainDartJs();
-    }
-  </script>
+        <div class="col-sm-6 col-md-4"><!--start element 1-->
+          <div  class="thumbnail shadow up-hover">
+            <img src="http://emant.altervista.org/ext/simon.jpg"/> 
+            <div class="cust-caption">
+              <a href="https://codepen.io/Em-Ant/full/QbRyqq"><h3 class="stm-font">Simon Game</h3></a>
+              <p>An emulation of the classic memory game using jQuery. Graphics are pure CSS. It'uses the new AudioContext API, so you need an up-to-date version of firefox or chrome to run it. </p>
+            </div>
+          </div>
+        </div><!--end element 1-->
+
+        <div class="col-sm-6 col-md-4"><!--start element 2-->
+          <div  class="thumbnail shadow up-hover">
+            <img src="http://emant.altervista.org/ext/pomo.jpg"/> 
+            <div class="cust-caption">
+              <a href="https://codepen.io/Em-Ant/full/vObzWm"><h3 class="stm-font">Pomodoro Clock</h3></a>
+              <p>A timer to help you to improve your skills. Made with simple CSS, and jQuery. The vector arts are made by me in Inkscape</p>
+            </div>
+          </div>
+        </div><!--end element 2-->
+
+        <div class="col-sm-6 col-md-4"><!--start element 3-->
+          <div class="thumbnail shadow up-hover">
+            <img src="http://emant.altervista.org/ext/calc.jpg"/> 
+            <div class="cust-caption">
+              <a href="https://codepen.io/Em-Ant/full/OVabRP"><h3 class="stm-font">Pocket Calculator</h3></a>
+              <p>A bootstrap and jQuery powered emulation of a vintage pocket calculator. It features the classic operator chaining workflow, and the percent operator in windows calc mode.</p>
+            </div>
+          </div>
+        </div><!--end element 3-->
+
+        <div class="col-sm-6 col-md-4"><!--start element 4-->
+          <div  class="thumbnail shadow up-hover">
+            <img src="http://emant.altervista.org/ext/quotes.jpg"/> 
+            <div class="cust-caption">
+              <a href="https://codepen.io/Em-Ant/full/jPQqwB"><h3 class="stm-font">Random Quotes Machine</h3></a>
+              <p>This little app retrieves random quotes from the 'Quotes.net' servers. It uses AJAX calls in jQuery, and the Twitter API. Made with Bootstrap, and custom images</p>
+            </div>
+          </div>
+        </div><!--end element 4-->
+
+        <div class="col-sm-6 col-md-4"><!--start element 5-->
+          <div class="thumbnail shadow up-hover">
+            <img src="http://emant.altervista.org/ext/cnews.jpg"/> 
+            <div class="cust-caption">
+              <a href="https://codepen.io/Em-Ant/full/WvPNPM"><h3 class="stm-font">fcc Camper News</h3></a>
+              <p>This app use Ajax to obtain infos about the last posts on the 'freeCodeCamp.com' forum. Then it displays the data using the powerful Bootstrap's responsive grid. Powered by jQuery.</p>
+            </div>
+          </div>
+        </div><!--end element 5-->
+
+        <div class="col-sm-6 col-md-4"><!--start element 6-->
+          <div  class="thumbnail shadow up-hover">
+            <img src="http://emant.altervista.org/ext/tic.jpg"/> 
+            <div class="cust-caption">
+              <a href="https://codepen.io/Em-Ant/full/KpEWdR"><h3 class="stm-font">Tic Tac Toe</h3></a>
+              <p>The access point to understanding AI in games. The computer player uses the classic MiniMax algorithm. Try to beat him if you can. Made in Bootstrap, jQuery and font Awesome.</p>
+            </div>
+          </div>
+        </div><!--end element 6-->
+
+      </div><!---end row-->
+      </section> <!--end portfolio-->
+    </div><!--end container-->
+    <footer id="links" class="main-nav stm-font dark-bg">
+         <div class="container">
+        <div class="col-sm-4 hidden-xs">
+          <ul class="list-unstyled">
+            <li>Created for <a href="http://www.freecodecamp.com/" target="_blank">freeCodeCamp</a></li>
+            <li>Powered by <a href="http://jquery.com/" target="_blank">jQuery</a></li>
+            <li>Designed with <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+            <li>Custom Graphics in <a href="http://inkscape.org/" target="_blank">Inkscape</a></li>       
+          </ul>
+        </div>
+        <div class="col-sm-8  center">
+            <img id="flogo" src="http://emant.altervista.org/ext/logo.png" alt="logo: EmAnt" title="logo" width="150px"/>
+            <p >contact me at <a href="mailto:mail@example.com">mail@example.com</a></p>
+            <p>Copyright &copy; 2015 by <a href="http://emant.altervista.org/" target="_blank">EmAnt</a></p>
+        </div>
+      </div>
+          </div>    
+    </footer>
 </body>
 </html>
